@@ -1,0 +1,7 @@
+**/.terraform
+.aws
+terraform.tfstate.d
+tfvars
+generated
+ssh_keys
+*.backup
