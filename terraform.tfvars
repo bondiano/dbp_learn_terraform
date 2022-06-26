@@ -1,5 +1,0 @@
-region            = "us-east-1"
-image             = "bondiano/terraform-aws:latest"
-instance_ami      = "ami-09e2e5104f310ffb5"
-instance_user     = "core"
-env = "staging"

@@ -9,12 +9,12 @@ inputs = {
 }
 
 remote_state {
-  backend  = "s3"
+  backend = "s3"
   generate = {
     path      = "backend.tf"
     if_exists = "overwrite_terragrunt"
   }
-  config   = {
+  config = {
     bucket         = "${local.project}-tf"
     key            = "terraform.tfstate"
     region         = local.region

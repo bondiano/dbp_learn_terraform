@@ -14,3 +14,14 @@ push_vars:
 
 pull_vars:
 	aws s3 cp --sse="AES256" $(REMOTE_TFVARS_PATH) $(LOCAL_TFVARS_PATH)
+
+format: format_docker
+
+format_docker:
+	docker-compose run --rm infra make fmt
+
+fmt:
+	terragrunt hclfmt
+	terragrunt fmt -recursive .
+
+.SILENT:
