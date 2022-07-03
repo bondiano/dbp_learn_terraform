@@ -1,3 +1,8 @@
+variable "var.region" {
+  description = "aws region"
+  type = string
+}
+
 variable "name" {
   description = "Name of the cluster"
   type        = string
